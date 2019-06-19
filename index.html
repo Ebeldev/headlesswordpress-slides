@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/customCss.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal bgLinear">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						## Headless wordpress
+
+						with GraphQL & ReactJS
+					</textarea>
+				</section>
+
+				<section data-background-image="./assets/learn-javascript.png"></section>
+
+				<section data-markdown>
+					<textarea data-template>
+						# the goal for today
+
+						Use Wordpress as a backend service api & use new stack to deliver the front-end
+					</textarea>
+				</section>
+
+				<section>
+					<div class="flexbox50 bio">
+						<div>
+							<img src="../assets/portrait2018.jpg" />
+						</div>
+						<div class="list-wrapper">
+							<ul>
+								<li>Self-taugh web developper</li>
+								<li>Been working with WordPress for 10 years</li>
+								<li>Work @ DistrictWeb as full-stack developper</li>
+								<li>Contact
+									<ul>
+										<li><i class="fas fa-clock"></i>etienne@etiennebelanger.com</li>
+										<li><i class="fas fa-clock"></i>belangeretienne</li>
+										<li><i class="fas fa-clock"></i>@ebeldev</li>
+										<li><i class="fas fa-clock"></i>@ebeldev</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="flexbox50">
+						<div>
+							<img src="../assets/Mosaic-Web-Browser.png" />
+						</div>
+						<div class="list-wrapper">
+							<h2>The web has changed a lot</h2>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="flexbox50">
+						<div>
+							<img src="../assets/old-wordpress.png" />
+						</div>
+						<div class="list-wrapper">
+							<h2>and so did WordPress</h2>
+						</div>
+					</div>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![Tradional CMS](../assets/traditional-cms.png)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Internet of things](../assets/internet-of-things-1.png#h80)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Internet of things](../assets/internet-of-things-2.png#h80)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Internet of things](../assets/internet-of-things-3.png#h80)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Headless Decoupled](../assets/headless-decoupled.png#h80)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Headless WordPress](../assets/headless-wordpress.png#h80)
+					</textarea>
+				</section>
+
+				<section>
+					<h2>Advantages of Headless CMS</h2>
+					<p class="fragment fade-in-then-semi-out">separate content and presentation</p>
+					<p class="fragment fade-in-then-semi-out">generate unique user experiences</p>
+					<p class="fragment fade-in-then-semi-out">make your content available to mobile apps, kiosk, VR experiences, and other mediums</p>
+				</section>
+
+				<section>
+					<div class="flexbox50">
+						<div>
+							<h2>Rest Api</h2>
+							<p>/wp-json/wp/v2/</p>
+						</div>
+						<div>
+							<img src="../assets/rest-api.png" />
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="flexbox50">
+						<div>
+							<img src="../assets/card-ui.png" />
+						</div>
+						<div>
+							<h2>Rest Api</h2>
+							<span>/wp-json/wp/v2/</span>
+							<p class="fragment fade-in">/posts</p>
+							<p class="fragment fade-in">/media/"id"</p>
+							<p class="fragment fade-in">/users/"id"</p>
+							<p class="fragment fade-in">/categories/"id"</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Rest Api</h2>
+					<p>desavantages</p>
+					<p class="fragment fade-in-then-semi-out">OverFetching <span>a client downloads more information than is actually</span></p>
+					<p class="fragment fade-in-then-semi-out">Underfetching <span>a specific endpoint doesn’t provide enough of the required information</span></p>
+					<p class="fragment fade-in-then-semi-out">Maintainability and Scalability <span>having too many endpoints</span></p>
+				</section>
+
+				<section>
+					<img src="../assets/graphql-logo.png" />
+					<p>A query language for your API</p>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![Rest vs GraphQL](../assets/rest-vs-graphql.png)
+					</textarea>
+				</section>
+
+				<section>
+					<h2>GraphQL</h2>
+					<p>Type of operations you can do on your api</p>
+					<p class="fragment fade-in-then-semi-out">Query <span>get your data</span></p>
+					<p class="fragment fade-in-then-semi-out">Mutation <span>modify your data</span></p>
+					<p class="fragment fade-in-then-semi-out">Subscription <span>subscribe to action</span></p>
+				</section>
+
+				<section>
+					<h2>GraphQL</h2>
+					<p>consist of two blocks</p>
+					<div class="flexbox50">
+						<div>
+							<h3>Server</h3>
+							<p class="fragment fade-in-then-semi-out">Responsible for the SCHEMA of your API and resolvers of the data</p>
+							<p class="fragment fade-in-then-semi-out">
+								<img src="../assets/graphql-server.png" />
+							</p>
+						</div>
+						<div>
+							<h3>Client</h3>
+							<p class="fragment fade-in-then-semi-out">Responsible for making the query to the server</p>
+							<p class="fragment fade-in-then-semi-out">
+								<img src="../assets/graphql-client.png" />
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>GraphQL</h2>
+					<p>options</p>
+					<div class="flexbox50">
+						<div>
+							<h3>Server</h3>
+							<p class="fragment fade-in-then-semi-out">Custom</p>
+							<p class="fragment fade-in-then-semi-out">Prisma<span>Framework for self-hosted GraphQL server</span></p>
+							<p class="fragment fade-in-then-semi-out">WordExpress<span>Framework to help develop Wordpress applications (server + client)</span></p>
+							<p class="fragment fade-in-then-semi-out">wp-graphql<span>WordPress plugin</span><span>https://github.com/wp-graphql/wp-graphql</span></p>
+						</div>
+						<div>
+							<h3>Client</h3>
+							<p class="fragment fade-in-then-semi-out">Relay<span>From Facebook, for more advance developpers</span></p>
+							<p class="fragment fade-in-then-semi-out">Apollo-client<span>Apollo-boost = no setup, cache, manage local and server data</span></p>
+						</div>
+					</div>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![GraphQL Nodes](../assets/graphqlnode.png#h80)
+					</textarea>
+				</section>
+
+				<section>
+					<h2>WordPress Setup</h2>
+					<p>WordPress will serve as the backend system on which GraphQL will be hocked on</p>
+					<p>Install wp-graphql plugin</p>
+				</section>
+
+				<section class="full">
+					<h2>Extending Wp-Graphql plugin</h2>
+					<p class="fragment fade-in-then-semi-out">in your theme functions.php</span></p>
+					<pre>
+						<code class="php">
+							use WPGraphQL\Types;
+
+							function wcgql_add_custom_fields_to_graphql ($fields) {
+								$fields['custom'] = [
+								'type' 			=> Types::String(),
+								'description'	=> __( 'The date the film was released', 'wcmtl-graphql' ),
+								'resolve'		=> function ( \WP_Post $post ) {
+									// Get your data
+									$customField = get_post_meta( $post->ID, 'custom_field_name', true );
+									// make any modification on your data
+
+									// Return your data
+									return $customField;
+								},
+								];
+
+								return $fields;
+							}
+
+							add_filter( 'graphql_post_fields', 'wcgql_add_custom_fields_to_graphql', 10, 1 );
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>ReactJS Setup</h2>
+					<p class="fragment fade-in">NodeJS</p>
+					<p class="fragment fade-in">In your command line</p>
+					<p class="fragment fade-in">npx create-react-app nameofyourproject</p>
+					<p class="fragment fade-in">cd nameofyourproject</p>
+					<ul>
+						<li class="fragment fade-in">npm install apollo-boost react-apollo graphql —-save
+							<ul>
+								<li class="fragment">apollo-boost: Apollo-Client</li>
+								<li class="fragment">react-apollo: View layer integration in react</li>
+								<li class="fragment">graphql: Parses GraphQL queries</li>
+							</ul>
+						</li>
+					</ul>
+					<p class="fragment fade-in">npm install react-router-dom —-save</p>
+					<p class="fragment fade-in">npm start</p>
+					<p class="fragment fade-in">localhost:3000</p>
+
+				</section>
+
+				<section>
+					<h2>Apollo-Boost Client Setup</h2>
+					<p class="fragment fade-in-then-semi-out">Create a client</p>
+					<img class="fragment fade-in-then-semi-out" src="../assets/graphql-client-create-client.png" alt="">
+				</section>
+
+				<section>
+					<h2>Apollo-Boost Client Setup</h2>
+					<p class="fragment fade-in-then-semi-out">Connect your app with Client</p>
+					<img class="fragment fade-in-then-semi-out" src="../assets/importApolloProvider.png" alt="">
+					<img class="fragment fade-in-then-semi-out" src="../assets/graphql-client-connect-app.png" alt="">
+				</section>
+
+				<section>
+					<h2>Apollo-Boost Client Setup</h2>
+					<p class="fragment fade-in-then-semi-out">In your component, import modules</p>
+					<img class="fragment fade-in-then-semi-out" src="../assets/importIntoComponent.png" alt="">
+				</section>
+
+				<section>
+					<h2>Apollo-Boost Client Setup</h2>
+					<p class="fragment fade-in-then-semi-out">In your component, make the query</p>
+					<img class="fragment fade-in-then-semi-out" src="../assets/querycomponent.png" alt="">
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![Victory](../assets/victory.jpg)
+					</textarea>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+					<p class="fragment fade-in-then-semi-out">Download the slides</p>
+					<p class="fragment fade-in">https://github.com/Ebeldev/wordcamp-graphql-slides</p>
+					<p class="fragment fade-in-then-semi-out">Download the demo</p>
+					<p class="fragment fade-in">https://github.com/Ebeldev/wordcampmtl2018react</p>
+				</section>
+
+				<section>
+					<h2>Extra</h2>
+					<p class="fragment fade-in">GraphQL + Wordpress with Jason Bahl <a href="https://www.youtube.com/watch?v=tYXlHb2eyQw">https://www.youtube.com/watch?v=tYXlHb2eyQw</a></p>
+					<p class="fragment fade-in">GraphQL + Wordpress Learning site <a href="https://edwincromley.gitbooks.io/wp-graphql/content/">https://edwincromley.gitbooks.io/wp-graphql/content/</a></p>
+					<p class="fragment fade-in">Apollo GraphQL <a href="apollographql.com">apollographql.com</a></p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
