@@ -1,1 +1,1 @@
-# WordCamp Montreal -- Headless project with WordPress, React and GraphQL
+# Slides for Headless project with WordPress, React and GraphQL conference
