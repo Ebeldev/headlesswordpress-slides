@@ -55,7 +55,7 @@
 					<h2>Étienne Bélanger</h2>
 					<div class="fbx fbx30 bio pfz08">
 						<div>
-							<img src="../assets/portrait2018.jpg" />
+							<img src="./assets/portrait2018.jpg" />
 						</div>
 						<div class="list-wrapper">
 							<ul>
@@ -78,7 +78,7 @@
 				<section>
 					<div class="fbx fbx50">
 						<div>
-							<img src="../assets/Mosaic-Web-Browser.png" />
+							<img src="./assets/Mosaic-Web-Browser.png" />
 						</div>
 						<div class="list-wrapper">
 							<h2>The web has changed a lot</h2>
@@ -89,7 +89,7 @@
 				<section>
 					<div class="fbx fbx50">
 						<div>
-							<img src="../assets/old-wordpress.png" />
+							<img src="./assets/old-wordpress.png" />
 						</div>
 						<div class="list-wrapper">
 							<h2>and so did WordPress</h2>
@@ -99,32 +99,32 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						![Tradional CMS](../assets/traditional-cms.png)
+						![Tradional CMS](./assets/traditional-cms.png)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![Internet of things](../assets/internet-of-things-1.png)
+						![Internet of things](./assets/internet-of-things-1.png)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![Internet of things](../assets/internet-of-things-2.png)
+						![Internet of things](./assets/internet-of-things-2.png)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![Internet of things](../assets/internet-of-things-3.png)
+						![Internet of things](./assets/internet-of-things-3.png)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![Headless Decoupled](../assets/headless-decoupled.png#h80)
+						![Headless Decoupled](./assets/headless-decoupled.png#h80)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![Headless WordPress](../assets/headless-wordpress.png#h80)
+						![Headless WordPress](./assets/headless-wordpress.png#h80)
 					</textarea>
 				</section>
 
@@ -142,14 +142,14 @@
 							<p>/wp-json/wp/v2/</p>
 						</div>
 						<div>
-							<img src="../assets/rest-api.png#h80" />
+							<img src="./assets/rest-api.png#h80" />
 						</div>
 					</div>
 				</section>
 				<section>
 					<div class="fbx fbx50">
 						<div>
-							<img src="../assets/card-ui.png" />
+							<img src="./assets/card-ui.png" />
 						</div>
 						<div>
 							<h2>Rest Api</h2>
@@ -173,7 +173,7 @@
 				<section>
 					<div class="fbx fbx50">
 						<div>
-							<img src="../assets/graphql-logo.png" />
+							<img src="./assets/graphql-logo.png" />
 						</div>
 						<div>
 							<p class="fragment fade-in">Open-sourced by Facebook in 2015</p>
@@ -184,7 +184,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						![Rest vs GraphQL](../assets/rest-vs-graphql.png#h90)
+						![Rest vs GraphQL](./assets/rest-vs-graphql.png#h90)
 					</textarea>
 				</section>
 
@@ -225,7 +225,6 @@ type Author {
 							<h5>Client</h5>
 							<p class="fragment fade-in fz06">Responsible for making the query to the server</p>
 							<p class="fragment fade-in">
-								<!-- <img src="../assets/graphql-client.png#h50" /> -->
 								<pre class="fragment fade-in sW"><code data-trim>
 								query {
 								 posts {
@@ -239,7 +238,6 @@ type Author {
 								</code></pre>
 							</p>
 							<p class="fragment fade-in">
-								<!-- <img src="../assets/graphql-client.png#h50" /> -->
 								<pre class="fragment fade-in sW"><code data-trim>
 {"data": {
   "posts": {
@@ -280,7 +278,7 @@ type Author {
 
 				<section data-markdown>
 					<textarea data-template>
-						![GraphQL Nodes](../assets/graphqlnode.png#h80)
+						![GraphQL Nodes](./assets/graphqlnode.png#h80)
 					</textarea>
 				</section>
 
@@ -314,7 +312,6 @@ function wcgql_add_custom_fields_to_graphql ($fields) {
 
 add_filter( 'graphql_post_fields', 'wcgql_add_custom_fields_to_graphql', 10, 1 );
 </code></pre>
-						
 						</section>
 
 				<section class="pfz08">
@@ -487,7 +484,7 @@ add_filter( 'graphql_post_fields', 'wcgql_add_custom_fields_to_graphql', 10, 1 )
 	</section>
 </section>
 
-				<section data-background-image="../assets/victory.jpg">
+				<section data-background-image="./assets/victory.jpg">
 				</section>
 
 				<section>
@@ -513,11 +510,7 @@ add_filter( 'graphql_post_fields', 'wcgql_add_custom_fields_to_graphql', 10, 1 )
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				// width: "90%",
-				// height: "100%",
-				// margin: 0,
-				// minScale: 0.2,
-				// maxScale: 1.2,
+				pdfSeparateFragments: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
